@@ -1,0 +1,39 @@
+{
+	"name": "@application/roundwindows",
+	"version": "0.0.9",
+	"private": false,
+	"homepage": "https://github.com/RoundWindows/Application#readme",
+	"bugs": {
+		"url": "https://github.com/RoundWindows/Application/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/RoundWindows/Application.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "Nikola R. Hristov",
+		"email": "Nikola@Playform.Cloud",
+		"url": "https://nikolahristov.tech"
+	},
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"prepublishOnly": "vite build",
+		"serve": "vite preview",
+		"start": "vite",
+		"tauri": "tauri"
+	},
+	"dependencies": {
+		"@tauri-apps/api": "next",
+		"@tauri-apps/plugin-shell": "latest",
+		"solid-js": "1.8.15"
+	},
+	"devDependencies": {
+		"@tauri-apps/cli": "next",
+		"internal-ip": "8.0.0",
+		"typescript": "5.4.2",
+		"vite": "5.1.6",
+		"vite-plugin-solid": "2.10.2"
+	}
+}
