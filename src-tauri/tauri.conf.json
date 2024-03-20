@@ -1,33 +1,102 @@
 {
-  "productName": "round-windows",
-  "version": "0.0.0",
-  "identifier": "com.tauri.dev",
-  "build": {
-    "beforeDevCommand": "pnpm dev",
-    "devUrl": "http://localhost:1420",
-    "beforeBuildCommand": "pnpm build",
-    "frontendDist": "../dist"
-  },
-  "app": {"windows": [
-      {
-        "title": "round-windows",
-        "width": 800,
-        "height": 600
-      }
-    ],
-    "security": {
-      "csp": null
-    }
-  },
-  "bundle": {
-    "active": true,
-    "targets": "all",
-    "icon": [
-      "icons/32x32.png",
-      "icons/128x128.png",
-      "icons/128x128@2x.png",
-      "icons/icon.icns",
-      "icons/icon.ico"
-    ]
-  }
+	"$schema": "https://raw.githubusercontent.com/tauri-apps/tauri/dev/tooling/cli/schema.json",
+	"app": {
+		"macOSPrivateApi": false,
+		"security": {
+			"assetProtocol": {
+				"enable": false,
+				"scope": []
+			},
+			"capabilities": [],
+			"csp": null,
+			"dangerousDisableAssetCspModification": false,
+			"freezePrototype": false,
+			"pattern": {
+				"use": "brownfield"
+			}
+		},
+		"trayIcon": {
+			"iconAsTemplate": true,
+			"iconPath": "src/Image/icon.ico"
+		},
+		"windows": [],
+		"withGlobalTauri": false
+	},
+	"build": {
+		"beforeBuildCommand": "pnpm run prepublishOnly",
+		"beforeDevCommand": "pnpm dev",
+		"devUrl": "http://localhost:1420",
+		"frontendDist": "../Target"
+	},
+	"bundle": {
+		"active": true,
+		"android": {
+			"minSdkVersion": 24
+		},
+		"category": "DeveloperTool",
+		"copyright": "Copyright (c) 2022-2023 Nikola R. Hristov. All rights reserved.",
+		"externalBin": [],
+		"iOS": {},
+		"icon": [
+			"src/Image/16x16.png",
+			"src/Image/32x32.png",
+			"src/Image/icon.ico"
+		],
+		"linux": {
+			"appimage": {
+				"bundleMediaFramework": false,
+				"files": {}
+			},
+			"deb": {
+				"files": {}
+			},
+			"rpm": {
+				"epoch": 0,
+				"files": {},
+				"release": "1"
+			}
+		},
+		"longDescription": "Round Windows.",
+		"macOS": {
+			"dmg": {
+				"appPosition": {
+					"x": 0,
+					"y": 0
+				},
+				"applicationFolderPosition": {
+					"x": 0,
+					"y": 0
+				},
+				"windowSize": {
+					"height": 400,
+					"width": 660
+				}
+			},
+			"files": {},
+			"minimumSystemVersion": "10.13"
+		},
+		"resources": [],
+		"shortDescription": "Round Windows.",
+		"targets": "all",
+		"windows": {
+			"allowDowngrades": false,
+			"certificateThumbprint": null,
+			"digestAlgorithm": "sha256",
+			"nsis": null,
+			"timestampUrl": null,
+			"tsp": true,
+			"webviewFixedRuntimePath": null,
+			"webviewInstallMode": {
+				"silent": true,
+				"type": "downloadBootstrapper"
+			},
+			"wix": {
+				"bannerPath": "src/Image/banner.png",
+				"dialogImagePath": "src/Image/dialogImage.png"
+			}
+		}
+	},
+	"identifier": "app.roundedcorners.app",
+	"productName": "Round Windows",
+	"version": "0.0.9"
 }
