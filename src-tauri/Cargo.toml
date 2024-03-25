@@ -37,5 +37,5 @@ tauri = { version = "2.0.0-beta.12", features = [
 	"window-show",
 	"window-unmaximize",
 ] }
-tauri-plugin-store = { git = "https://github.com/tauri-apps/plugins-workspace", branch = "v2" }
+tauri-plugin-store = { git = "HTTPS://GitHub.Com/tauri-apps/plugins-workspace", branch = "v2" }
 tauri-plugin-shell = "2.0.0-beta.2"
